@@ -1,0 +1,110 @@
+webhook-url:
+  default: "WEBHOOK_URL"
+  buy: ""
+  sell: ""
+
+username: "Shop"
+avatar-url: ""
+
+embed:
+  buy:
+    color: "#00FF00"
+
+    title:
+      enabled: true
+      content: "New Purchase"
+
+    description:
+      enabled: true
+      content: "**{player}** has purchased items from the shop."
+
+    author:
+      enabled: false
+      name: "{player}"
+      url: ""
+      icon: "https://minotar.net/avatar/{player}/64.png"
+
+    thumbnail:
+      enabled: false
+      url: "https://example.com/money.png"
+
+    image:
+      enabled: false
+      url: "https://example.com/banner.png"
+
+    footer:
+      enabled: true
+      text: "ShopGUI+ Logs • {shop}"
+      icon: ""
+
+    fields:
+      - enabled: true
+        name: "Player Name"
+        value: "{player}"
+
+      - enabled: true
+        name: "Action"
+        value: "Bought"
+
+      - enabled: true
+        name: "Item Purchased"
+        value: "{amount}x {item}"
+
+      - enabled: true
+        name: "Total Cost"
+        value: "${price}"
+
+      - enabled: true
+        name: "Category"
+        value: "{shop}"
+
+  sell:
+    color: "#FF0000"
+
+    title:
+      enabled: true
+      content: "New Sale"
+
+    description:
+      enabled: true
+      content: "**{player}** has sold items to the shop."
+
+    author:
+      enabled: false
+      name: "{player}"
+      url: ""
+      icon: "https://minotar.net/avatar/{player}/64.png"
+
+    thumbnail:
+      enabled: false
+      url: ""
+
+    image:
+      enabled: false
+      url: ""
+
+    footer:
+      enabled: true
+      text: "ShopGUI+ Logs • {shop}"
+      icon: ""
+
+    fields:
+      - enabled: true
+        name: "Player"
+        value: "{player}"
+
+      - enabled: true
+        name: "Action"
+        value: "Sold"
+
+      - enabled: true
+        name: "Item Sold"
+        value: "{amount}x {item}"
+
+      - enabled: true
+        name: "Profit"
+        value: "${price}"
+
+      - enabled: false
+        name: "Category"
+        value: "{shop}"

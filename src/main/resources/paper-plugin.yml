@@ -1,0 +1,11 @@
+name: ShopGUIPlus-DiscordLogs
+version: '1.0'
+main: mr.matanr.shopGUIPlusDiscordLogs.ShopGUIPlusDiscordLogs
+api-version: '1.21'
+author: 'MatanR'
+
+dependencies:
+  server:
+    ShopGUIPlus:
+      load: BEFORE
+      required: true
